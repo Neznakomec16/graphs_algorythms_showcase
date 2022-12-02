@@ -5,15 +5,15 @@ from src.graph import Node
 
 
 @pytest.mark.parametrize(
-    'target, expected',
+    "target, expected",
     (
-            ('A', ['A']),
-            ('B', ['A', 'B']),
-            ('C', ['A', 'C']),
-            ('E', ['A', 'C', 'E']),
-            ('D', None),
-            ('F', None),
-    )
+        ("A", ["A"]),
+        ("B", ["A", "B"]),
+        ("C", ["A", "C"]),
+        ("E", ["A", "C", "E"]),
+        ("D", None),
+        ("F", None),
+    ),
 )
 def test_dfs_recurcive(connected_nodes: list[Node], target: str, expected: list[Node]):
     a, b, c, d, e = connected_nodes

@@ -1,9 +1,13 @@
 from src.graph import Node
 
 
-def dfs_recurcive(start_node: Node, target: str, path: list | None = None, visited: set | None = None) -> list[Node] | None:
-    if path is None: path = []
-    if visited is None: visited = set()
+def dfs_recurcive(
+    start_node: Node, target: str, path: list | None = None, visited: set | None = None
+) -> list[Node] | None:
+    if path is None:
+        path = []
+    if visited is None:
+        visited = set()
     path.append(start_node)
     visited.add(start_node)
     if start_node.name == target:
